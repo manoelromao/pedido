@@ -1,0 +1,212 @@
+/* Fonte e base */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #fff1f5, #ffe4ec);
+    font-family: 'Montserrat', sans-serif;
+    color: #4c0033;
+    overflow-x: hidden;
+  }
+  
+  /* Container principal */
+  .container {
+    text-align: center;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Spotify player */
+  .spotify iframe {
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(255, 192, 203, 0.3);
+  }
+  
+  /* Imagem central */
+  .photo img {
+    border-radius: 30px;
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 32px;
+    margin: 10px 0 20px;
+    color: #a8005c;
+  }
+  
+  /* Contador */
+  .contador {
+    background-color: #ffd6e2;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #a8005c;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(255, 182, 193, 0.3);
+  }
+  
+  /* Texto */
+  .texto {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    border: 1px solid #f3dce1;
+  }
+
+  .texto {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .destaque-nome {
+    font-size: 35px;     
+    font-weight: bold;
+    color: #a8005c;       
+    display: block;
+  }
+
+  /* Corações */
+  #hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url('heart.png'); 
+    background-size: cover;
+    animation: fall 6s linear infinite;
+  }
+
+  .botoes {
+    margin-top: 30px;
+    position: relative;
+    height: 100px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .botao-romantico {
+    padding: 12px 32px;
+    position: relative;
+    left: -90px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff99cc, #ff4f8b);
+    color: white;
+    box-shadow: 0 4px 14px rgba(255, 105, 135, 0.3);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .botao-romantico:hover {
+    transform: scale(1.05);
+  }
+  
+  .botao-fujao {
+    position: absolute;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff99cc, #ff4f8b);
+    color: white;
+    box-shadow: 0 4px 14px rgba(255, 105, 135, 0.3);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-conteudo {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  
+  .fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+
+  
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) translateX(20px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  

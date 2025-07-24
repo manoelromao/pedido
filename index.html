@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoel & Alice</title>
+
+  <!-- Fonte Montserrat do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Estilo externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Spotify Embed -->
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2C0hTkdEoikhKzDCJl32QZ?utm_source=generator" width="60%" height="152" frameBorder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <!-- Foto central -->
+    <div class="photo">
+      <img src="foto.jpg" alt="Manoel e Alice" />
+    </div>
+
+    <!-- Título -->
+    <h1>Nos conhecemos há:</h1>
+
+    <!-- Contador -->
+    <div class="contador" id="contador"></div>
+
+    <!-- Texto romântico -->
+    <p class="texto">
+      <span class="destaque-nome">Alice,</span>
+
+      Eu não sei exatamente em que página da vida você apareceu, mas desde então tudo começou a fazer mais sentido. 
+      Foi como encontrar um livro raro, desses que a gente segura com cuidado, que lê devagar pra não acabar, e que carrega em silêncio quando precisa de abrigo.<br><br>
+
+      Você não virou minha história, você se tornou parte dela. E mesmo eu, com meus capítulos confusos, com as vírgulas fora do lugar e algumas páginas rasgadas, encontrei em você uma leitora paciente.<br><br>
+
+      Não quero ser o ponto final de nada seu. Quero ser aquele trecho que te faz sorrir no meio de um dia difícil. Quero ser pausa, travessão, suspiro. E, se você permitir, quero escrever ao seu lado tudo o que vier depois.<br><br>
+
+      Então, com todo o cuidado que você merece, e com tudo o que sinto por você, eu te pergunto:<br><br>
+
+      <strong>Quer namorar comigo? 💘</strong>
+    </p>
+
+    <!-- Botões -->
+    <div class="botoes">
+      <button class="botao-romantico">Sim, quero ❤️</button>
+      <button class="botao-fujao" id="nao">Não quero 💔</button>
+    </div>
+
+    <!-- Modal de Mensagem -->
+<div id="modalMensagem" class="modal escondido">
+    <div class="modal-conteudo">
+      <span class="fechar" id="fecharMensagem">&times;</span>
+      <p>
+        Você disse sim...<br><br>
+        E, com esse sim, você transformou o agora em sempre, o talvez em certeza, 
+        e o meu mundo em um lugar com mais cor.<br><br>
+        Bem-vinda ao capítulo mais bonito da nossa história. 💖<br><br>
+        Pode abrir a caixa.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Corações caindo -->
+  <div id="hearts-container"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
