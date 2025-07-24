@@ -71,3 +71,16 @@ fecharMensagem.addEventListener('click', () => {
   modalMensagem.classList.add('escondido');
 });
 
+document.querySelector('.botao-romantico').addEventListener('click', () => {
+    const modal = document.getElementById('modalMensagem');
+    modal.classList.remove('escondido');
+    modal.classList.add('fade-in');
+  });
+
+  document.getElementById('fecharMensagem').addEventListener('click', () => {
+    const modal = document.getElementById('modalMensagem');
+    modal.classList.add('escondido');
+    modal.classList.remove('fade-in');
+  });
+    
+
