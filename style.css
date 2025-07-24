@@ -219,3 +219,80 @@ body {
     }
   }
   
+/* Mobile-specific styles (320px-480px) */
+@media screen and (max-width: 480px) {
+  /* Container adjustments */
+  .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+  
+  /* Spotify iframe */
+  iframe {
+    width: 100% !important;
+    height: 152px;
+  }
+  
+  /* Photo size adjustment */
+  .photo img {
+    width: 200px;
+  }
+  
+  /* Typography adjustments */
+  h1 {
+    font-size: 24px;
+  }
+  
+  .contador {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .texto {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .destaque-nome {
+    font-size: 28px;
+  }
+  
+  /* Button adjustments */
+  .botoes {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botao-romantico {
+    position: static;
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 10px 25px;
+    font-size: 16px;
+    left: 0;
+  }
+  
+  .botao-fujao {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+  
+  /* Modal adjustments */
+  .modal-conteudo {
+    width: 85%;
+    padding: 20px;
+  }
+  
+  /* Heart animation optimization */
+  .heart {
+    width: 20px;
+    height: 20px;
+  }
+}

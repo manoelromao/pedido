@@ -39,8 +39,25 @@ function criarCoracao() {
   }, 6000);
 }
 
-// Coração novo a cada 300ms
-setInterval(criarCoracao, 200);
+// Otimização para dispositivos móveis - reduz a frequência de criação de corações
+function ajustarFrequenciaCoracoes() {
+  if (window.innerWidth <= 480) {
+    // Cria corações com menos frequência em dispositivos móveis (500ms)
+    return 500;
+  } else {
+    // Mantém a frequência original em desktops (200ms)
+    return 200;
+  }
+}
+
+// Inicializa o intervalo de criação de corações
+let intervaloCoracoes = setInterval(criarCoracao, ajustarFrequenciaCoracoes());
+
+// Atualiza o intervalo quando a janela é redimensionada
+window.addEventListener('resize', function() {
+  clearInterval(intervaloCoracoes);
+  intervaloCoracoes = setInterval(criarCoracao, ajustarFrequenciaCoracoes());
+});
 
 // Botões
 const botaoNao = document.getElementById('nao');
