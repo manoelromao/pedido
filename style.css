@@ -219,26 +219,22 @@ body {
     }
   }
   
-/* Mobile-specific styles (320px-480px) */
+
 @media screen and (max-width: 480px) {
-  /* Container adjustments */
   .container {
     padding: 10px;
     max-width: 100%;
   }
   
-  /* Spotify iframe */
   iframe {
     width: 100% !important;
     height: 152px;
   }
   
-  /* Photo size adjustment */
   .photo img {
     width: 200px;
   }
   
-  /* Typography adjustments */
   h1 {
     font-size: 24px;
   }
@@ -258,7 +254,7 @@ body {
     font-size: 28px;
   }
   
-  /* Button adjustments */
+
   .botoes {
     height: 150px;
     display: flex;
@@ -284,13 +280,12 @@ body {
     font-size: 16px;
   }
   
-  /* Modal adjustments */
   .modal-conteudo {
     width: 85%;
     padding: 20px;
   }
   
-  /* Heart animation optimization */
+ 
   .heart {
     width: 20px;
     height: 20px;
